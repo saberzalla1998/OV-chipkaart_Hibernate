@@ -1,8 +1,10 @@
 package domain;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 @Entity (name = "product")
@@ -21,7 +23,7 @@ public class Product {
 //            cascade = CascadeType.ALL
 //    )
 
-    @ManyToMany(mappedBy = "products", cascade = CascadeType.ALL)
+    @ManyToMany(mappedBy = "products")
     //@Transient
     List<OVChipkaart> ovChipkaarts = new ArrayList<>();
 

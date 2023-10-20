@@ -5,7 +5,6 @@ import javax.persistence.*;
 import java.sql.Date;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
 @Entity
 @Table (name = "ov_chipkaart")
@@ -27,8 +26,8 @@ public class OVChipkaart {
     private Reiziger reiziger;
 
 //    @ManyToMany
-
-    @ManyToMany
+//Hieronder heb ik de Cascade types toegevoegd op de attribuut producten
+    @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
             @JoinTable(
                     name = "ov_chipkaart_product", joinColumns = @JoinColumn(name = "kaart_nummer"), inverseJoinColumns = @JoinColumn(name = "product_nummer")
             )

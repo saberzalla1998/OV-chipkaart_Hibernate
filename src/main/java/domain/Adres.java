@@ -15,7 +15,7 @@ public class Adres {
     private String woonplaats;
     @OneToOne(
             cascade = CascadeType.ALL, fetch = FetchType.LAZY
-
+//Attribuut Reiziger met FetchType
     )
     @JoinColumn(name = "reiziger_id")
    // @Transient

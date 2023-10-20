@@ -39,7 +39,8 @@ public class ProductDAOHibernate implements ProductDAO {
         Transaction transaction = null;
         try {
             session.beginTransaction();
-            session.merge(product);
+            session.update(product);
+            //Ik heb de merge veranderd naar update
             session.getTransaction().commit();
         } catch (Exception e) {
             if(transaction != null){

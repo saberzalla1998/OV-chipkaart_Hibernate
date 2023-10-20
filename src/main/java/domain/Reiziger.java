@@ -22,7 +22,7 @@ public class Reiziger implements Serializable {
 mappedBy = "reiziger", fetch = FetchType.LAZY,
             cascade = CascadeType.ALL,
             orphanRemoval = true)
-
+//Dit is Attribuut Adres: het bevat mappedBy, CascadeType, orphanRemoval, FetchType
  //   @Transient
     private Adres adres;
 

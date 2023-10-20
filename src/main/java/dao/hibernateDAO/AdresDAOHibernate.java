@@ -56,7 +56,8 @@ public class AdresDAOHibernate implements AdresDAO {
         Transaction transaction = null;
         try {
             session.beginTransaction();
-            session.merge(adres);
+            session.update(adres);
+            //Ik heb de merge veranderd naar update
             session.getTransaction().commit();
         } catch (Exception e) {
             if(transaction != null){

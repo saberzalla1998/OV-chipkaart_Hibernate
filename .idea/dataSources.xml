@@ -12,5 +12,16 @@ C:/Users/hp/Desktop/OV-chipkaart_Hibernate/src/main/resources/hibernate.cfg.xml<
       <jdbc-url>jdbc:postgresql://localhost/ovchip</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
+    <data-source source="LOCAL" name="hibernate.cfg.xml/Hibernate" uuid="c6c65f0c-d145-4548-85ea-b6ee36830dfc">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>Hibernate
+
+C:/Users/hp/Desktop/OV-chipkaart_Hibernate/src/main/resources/hibernate.cfg.xml</remarks>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost/ovchip</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
   </component>
 </project>

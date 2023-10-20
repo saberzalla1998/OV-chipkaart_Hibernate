@@ -48,7 +48,8 @@ public class ReizigerDAOHibernate implements ReizigerDAO {
         Transaction transaction = null;
         try {
             session.beginTransaction();
-            session.merge(reiziger);
+            session.update(reiziger);
+            //Ik heb de merge veranderd naar update
             session.getTransaction().commit();
         } catch (Exception e) {
             if(transaction != null){

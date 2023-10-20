@@ -8,7 +8,6 @@ import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 
-import java.sql.SQLException;
 import java.util.List;
 
 public class OVChipkaartDAOHibernate implements OVChipkaartDAO {
@@ -56,7 +55,8 @@ public class OVChipkaartDAOHibernate implements OVChipkaartDAO {
         Transaction transaction = null;
         try {
             session.beginTransaction();
-            session.merge(ovChipkaart);
+            session.update(ovChipkaart);
+            //Ik heb de merge veranderd naar update
             session.getTransaction().commit();
         } catch (Exception e) {
             if(transaction != null){
